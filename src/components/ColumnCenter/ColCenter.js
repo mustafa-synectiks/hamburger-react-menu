@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ColumnOne = ({ open }) => {
+const ColCenter = ({ open }) => {
 	return (
 		<Ul open={open}>
 			<p>
@@ -19,12 +19,13 @@ const ColumnOne = ({ open }) => {
 				tenetur magni error. Sunt, culpa natus impedit vitae eos ratione sint assumenda fugiat cumque quia
 				voluptas repellendus quisquam tenetur quae quasi dicta qui quis dolor officiis consectetur eveniet!
 				Quasi ipsam quae architecto aspernatur, reiciendis rerum quam recusandae saepe incidunt nulla odio? Iure
+				center Column
 			</p>
 		</Ul>
 	);
 };
 
-export default ColumnOne;
+export default ColCenter;
 
 const Ul = styled.ul`
 	list-style: none;

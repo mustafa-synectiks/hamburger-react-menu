@@ -2,18 +2,18 @@ import React from 'react';
 // import a from 'gatsby';
 import styled from 'styled-components';
 
-import ColumnTwo from './ColumnTwo';
+import ColBurger from './ColBurger';
 
-const ColumnThree = () => {
+const ColContent = () => {
 	return (
 		<Nav>
 			{/* <div className='logo'>Synectiks</div> */}
-			<ColumnTwo />
+			<ColBurger />
 		</Nav>
 	);
 };
 
-export default ColumnThree;
+export default ColContent;
 
 const Nav = styled.nav`
 	width: 100%;

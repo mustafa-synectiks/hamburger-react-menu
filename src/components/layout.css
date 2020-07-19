@@ -21,16 +21,16 @@ body {
 	color: white;
 }
 .column:nth-child(1) {
-	background-color: #8b76cd;
-	padding: 0rem;
+	background-color: #76ead7;
+	padding: 0em;
 }
 .column:nth-child(2) {
-	background-color: #1e3074;
+	background-color: #ffc7c7;
 	color: white;
 }
 .column:nth-child(3) {
 	color: white;
-	background-color: #28295a;
+	background-color: #fe91ca;
 }
 .navigation {
 	min-height: 70vh;
@@ -38,7 +38,7 @@ body {
 }
 .togglebox {
 	background-color: #d9e9e3;
-	padding: 1rem;
+	padding: 1em;
 	text-align: right;
 	border-bottom: 1px solid #243c3f;
 	min-height: 5vh;

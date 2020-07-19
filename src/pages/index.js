@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import { FiAlignRight } from 'react-icons/fi';
 import { FiX } from 'react-icons/fi';
 import Navbar from '../components/Nav/Navbar';
-import Burger from '../components/Nav/Burger.js';
+// import Burger from '../components/Nav/Burger.js';
+import ColumnThree from '../components/Columns/ColumnThree.js';
+import ColContent from '../components/ColumnCenter/ColContent';
 
 const IndexPage = (props) => {
 	const [ isOpen, setNav ] = useState(true);
@@ -42,18 +44,15 @@ const IndexPage = (props) => {
 			{/* // </MenuWrapper> */}
 			<div className='main'>
 				<div className='column'>
-					<Burger />
+					{/* <Burger /> */}
 					<Navbar />
-					<button>Learn More</button>
+					<ColumnThree />
+					{/* <button>Learn More</button> */}
 				</div>
 				<div className='column'>
-					<h1>hi</h1>
-					<button>Learn More</button>
+					<ColContent />
 				</div>
-				<div className='column'>
-					<button>Learn More</button>
-					<h1>hi</h1>
-				</div>
+				<div className='column' />
 			</div>
 		</Layout>
 	);

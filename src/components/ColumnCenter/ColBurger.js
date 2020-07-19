@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import ColumnOne from './ColumnOne';
+import ColCenter from './ColCenter';
 
-const ColumnTwo = () => {
+const ColBurger = () => {
 	const [ open, setOpen, buttonText, setButtonText ] = useState(false);
 	// const changeText = (text) => setButtonText(text);
 	return (
@@ -14,32 +14,32 @@ const ColumnTwo = () => {
 				{/* Learn More */}
 				{/* </button> */}
 			</StyledBurger>
-			<ColumnOne open={open} />
+			<ColCenter open={open} />
 		</React.Fragment>
 	);
 };
 
-export default ColumnTwo;
+export default ColBurger;
 
 const StyledBurger = styled.div`
 	width: 2rem;
 	height: 2rem;
 	position: absolute;
 	bottom: 12em;
-	left: 20px;
+	left: 30em;
 	display: flex;
 	justify-content: space-around;
 	flex-flow: column nowrap;
 	z-index: 20;
 
 	button {
-		background-color: #fe91ca;
+		background-color: #3b2e5a;
 		padding: .5em 2em;
 		font-size: 1rem;
-		color: #333;
 		border: none;
-		font-weight: bold;
+		color: #fff;
 		cursor: pointer;
+		font-weight: bold;
 		width: 10em;
 		&:before {
 			content: ${({ open }) => (open ? 'Close' : 'Open')};
