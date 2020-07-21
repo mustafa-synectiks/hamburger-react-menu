@@ -44,18 +44,17 @@ export default ColumnOne;
 const Ul = styled.ul`
 	list-style: none;
 	background-color: #0d2538;
-	transform: ${({ open }) => (open ? 'translateX(10%)' : 'translateX(-100%)')};
+	transform: ${({ open }) => (open ? 'translateY(0%)' : 'translateY(-101%)')};
 	transition: transform 0.5s ease-in;
 	flex-flow: column nowrap;
 	position: fixed;
-	top: 3.4em;
-  left: -1.1%;
-   width: 25vw;
-	width: 25vw;
+	top: 0em;
+  left: 0%;
+   width: 100vw;
 	padding-top: 3.5rem;
 	padding-left: 1em;
 	padding-left: 1em;
-	height: 46vh;
+	height: 50vh;
 
 	li {
 		padding: 18px 10px;
@@ -69,23 +68,35 @@ const Ul = styled.ul`
 	.subMenu {
 		background-color: pink;
 		position:absolute;
-		width: 55%;
+		width: 85vw;
 		   top: 0px;
-    height: 46vh;
+    height: 50vh;
     padding-top: 3.5em;
 		list-style:none;
-		transform: translateX(70%);
-		/* transform: ${({ isOpen }) => (isOpen ? 'translateX(-10%)' : 'translateX(10%)')}; */
+		transform: translateX(15%);
+		/* transform: ${({ isOpen }) => (isOpen ? 'translateY(-10%)' : 'translateY(10%)')}; */
 		transition: transform 0.5s ease-in;
 	}
 
-	.subMenuHidden {
-		transform: translateX(0%);
-		opacity:0;
+	/* .subMenuHidden {
+		transform: translateX(-70%);
+		/* opacity:0;
 		transition: transform 0.5s ease-in;
-		/* opacity: ${({ open }) => (open ? 0 : 1)}; */
+		/* opacity: ${({ open }) => (open ? 0 : 1)};
 		height: 0em;
 		overflow: hidden;
-		}
+		} */
+
+	.subMenuHidden {
+		background-color: pink;
+		position:absolute;
+		width: 85vw;
+		   top: 0px;
+    height: 50vh;
+    padding-top: 3.5em;
+		list-style:none;
+		transform: translateX(-105%);
+		/* transform: ${({ isOpen }) => (isOpen ? 'translateY(-10%)' : 'translateY(10%)')}; */
+		transition: transform 0.5s ease-in;
 	}
 `;
