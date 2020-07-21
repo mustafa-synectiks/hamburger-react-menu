@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ColumnOne from './ColumnOne';
 
 const ColumnTwo = () => {
-	const [ open, setOpen, buttonText, setButtonText ] = useState(false);
+	const [ open, setOpen ] = useState(false);
 	// const changeText = (text) => setButtonText(text);
 	return (
 		<React.Fragment>
