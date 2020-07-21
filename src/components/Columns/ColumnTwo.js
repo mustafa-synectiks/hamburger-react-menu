@@ -9,7 +9,7 @@ const ColumnTwo = () => {
 		<React.Fragment>
 			<StyledBurger>
 				<button open={open} onClick={() => setOpen(!open)}>
-					Learn More
+					{open ? 'Close' : 'Learn More'}
 				</button>
 				{/* Learn More */}
 				{/* </button> */}

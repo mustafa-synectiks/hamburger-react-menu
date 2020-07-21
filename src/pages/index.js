@@ -45,7 +45,7 @@ const IndexPage = (props) => {
 			<div className='main'>
 				<div className='column'>
 					{/* <Burger /> */}
-					{/* <Navbar /> */}
+					<Navbar />
 					<ColumnThree />
 					{/* <button>Learn More</button> */}
 				</div>
