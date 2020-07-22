@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import LeftBtn from './LeftBtn';
 
-const LefttBlock = () => {
+const LeftBlock = () => {
 	return (
 		<Nav>
 			<LeftBtn />
@@ -11,7 +11,7 @@ const LefttBlock = () => {
 	);
 };
 
-export default LefttBlock;
+export default LeftBlock;
 
 const Nav = styled.nav`
 	width: 100%;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const LefttMenu = ({ open }) => {
+const LeftMenu = ({ open }) => {
 	const [ isOpen, setNav ] = useState(false);
 	const [ isOpenn, setNavv ] = useState(false);
 	const toggleNav = () => {
@@ -38,7 +38,7 @@ const LefttMenu = ({ open }) => {
 	);
 };
 
-export default LefttMenu;
+export default LeftMenu;
 
 const Ul = styled.ul`
 	list-style: none;

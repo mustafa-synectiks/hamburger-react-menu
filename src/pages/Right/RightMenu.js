@@ -4,16 +4,16 @@ import styled from 'styled-components';
 const RightMenu = ({ open }) => {
 	const [ isOpen, setNav ] = useState(false);
 	const [ isOpenn, setNavv ] = useState(false);
-	const toggleR = () => {
+	const toggleNav = () => {
 		setNav((isOpen) => !isOpen);
 	};
-	const toggleR2 = () => {
+	const toggleNav2 = () => {
 		setNavv((isOpenn) => !isOpenn);
 	};
 
 	return (
 		<Ul open={open}>
-			<li onClick={toggleR}>
+			<li onClick={toggleNav}>
 				What We Do?
 				<ul className={isOpen ? `subMenu` : `subMenuHidden`}>
 					<li>Why Us?</li>
@@ -22,7 +22,7 @@ const RightMenu = ({ open }) => {
 					<li>More Details</li>
 				</ul>
 			</li>
-			<li onClick={toggleR2}>
+			<li onClick={toggleNav2}>
 				Why Us?
 				<ul className={isOpenn ? `subMenu` : `subMenuHidden`}>
 					<li>What We Do?</li>

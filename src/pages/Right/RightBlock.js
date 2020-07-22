@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
-import RightBtn from './RightBtn.js';
+import RightBtn from './RightBtn';
 
-const Navbar = () => {
+const RightBlock = () => {
 	return (
 		<Nav>
 			<RightBtn />
@@ -11,7 +11,7 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+export default RightBlock;
 
 const Nav = styled.nav`
 	width: 100%;
@@ -19,7 +19,7 @@ const Nav = styled.nav`
 	border-bottom: 1px solid #f1f1f1;
 	display: flex;
 	justify-content: flex-start;
-	align-items: left;
+	align-items: center;
 	font-weight: bold;
 	padding: 0 10px;
 
