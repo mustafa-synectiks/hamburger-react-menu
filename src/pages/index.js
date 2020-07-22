@@ -8,22 +8,19 @@ import Burger from '../components/Nav/Burger.js';
 import ColumnThree from '../components/Columns/ColumnThree.js';
 import ColContent from '../components/ColumnCenter/ColContent';
 import Dropdown from './dropdown.js';
+import RightBlock from './Right/RightBlock.js';
+import LeftBlock from './Left/LeftBlock.js';
 
 const IndexPage = (props) => {
 	return (
 		<Layout>
 			<div className='main'>
 				<div className='column'>
-					<Navbar />
-					<ColumnThree />
-					<Dropdown />
+					<LeftBlock />
 				</div>
+				<div className='column' />
 				<div className='column'>
-					<ColContent />
-					<Dropdown />
-				</div>
-				<div className='column'>
-					<Dropdown />
+					<RightBlock />
 				</div>
 			</div>
 		</Layout>
@@ -32,4 +29,9 @@ const IndexPage = (props) => {
 
 export default IndexPage;
 
-const MenuWrapper = styled.section``;
+const MenuWrapper = styled.section`
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+`;
