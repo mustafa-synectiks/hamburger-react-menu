@@ -8,7 +8,6 @@ import Burger from '../components/Nav/Burger.js';
 import ColumnThree from '../components/Columns/ColumnThree.js';
 import ColContent from '../components/ColumnCenter/ColContent';
 import Dropdown from './dropdown.js';
-import RightMenu from '../components/Right/RightMenu.js';
 
 const IndexPage = (props) => {
 	return (
@@ -25,7 +24,6 @@ const IndexPage = (props) => {
 				</div>
 				<div className='column'>
 					<Dropdown />
-					<RightMenu />
 				</div>
 			</div>
 		</Layout>

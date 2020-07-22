@@ -1,8 +1,8 @@
-import React from 'react';
-import Burger from '../Nav/Burger';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const RightMenu = ({ open }) => {
+const RightMenu = () => {
+	const [ open, setOpen ] = useState(false);
 	return (
 		<Ul open={open}>
 			<li>Home</li>

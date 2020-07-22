@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import RightNav from './RightNav';
-import RightMenu from '../Right/RightMenu.js';
 
 const Burger = () => {
 	const [ open, setOpen ] = useState(false);
@@ -15,7 +14,6 @@ const Burger = () => {
 				{open ? 'Close' : 'Learn More'}
 			</StyledBurger>
 			<RightNav open={open} />
-			<RightMenu open={open} />
 		</React.Fragment>
 	);
 };
