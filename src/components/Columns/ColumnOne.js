@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const ColumnOne = ({ open }) => {
-	const node = useRef();
 	const [ isOpen, setNav ] = useState(false);
 	const [ isOpenn, setNavv ] = useState(false);
 	const toggleNav = () => {
@@ -11,25 +10,10 @@ const ColumnOne = ({ open }) => {
 	const toggleNav2 = () => {
 		setNavv((isOpenn) => !isOpenn);
 	};
-	const handleClick = (e) => {
-		if (node.current.contains(e.target)) {
-			// inside click
-			return;
-		}
-		// outside click
-		setNav(false);
-		setNavv(false);
-	};
-	useEffect(() => {
-		document.addEventListener('mousedown', handleClick);
 
-		return () => {
-			document.removeEventListener('mousedown', handleClick);
-		};
-	}, []);
 	return (
 		<Ul open={open}>
-			<li ref={node} onClick={toggleNav}>
+			<li onClick={toggleNav}>
 				What We Do?
 				<ul className={isOpen ? `subMenu` : `subMenuHidden`}>
 					<li>Why Us?</li>
@@ -38,7 +22,7 @@ const ColumnOne = ({ open }) => {
 					<li>More Details</li>
 				</ul>
 			</li>
-			<li ref={node} onClick={toggleNav2}>
+			<li onClick={toggleNav2}>
 				Why Us?
 				<ul className={isOpenn ? `subMenu` : `subMenuHidden`}>
 					<li>What We Do?</li>
