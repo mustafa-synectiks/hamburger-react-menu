@@ -10,6 +10,7 @@ import ColContent from '../components/ColumnCenter/ColContent';
 import Dropdown from './dropdown.js';
 import RightBlock from './Right/RightBlock.js';
 import LeftBlock from './Left/LeftBlock.js';
+import CenterBlock from './Center/CenterBlock.js';
 
 const IndexPage = (props) => {
 	return (
@@ -18,7 +19,9 @@ const IndexPage = (props) => {
 				<div className='column'>
 					<LeftBlock />
 				</div>
-				<div className='column' />
+				<div className='column'>
+					<CenterBlock />
+				</div>
 				<div className='column'>
 					<RightBlock />
 				</div>

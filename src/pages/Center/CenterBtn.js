@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
-import RightMenu from './RightMenu';
+import CenterMenu from './CenterMenu';
 
-const RightBtn = () => {
+const CenterBtn = () => {
 	// const node = useRef();
 	const [ open, setOpen ] = useState(false);
 	// const changeText = (text) => setButtonText(text);
@@ -28,12 +28,12 @@ const RightBtn = () => {
 					{open ? 'Close' : 'Learn More'}
 				</button>
 			</StyledBurger>
-			<RightMenu open={open} />
+			<CenterMenu open={open} />
 		</React.Fragment>
 	);
 };
 
-export default RightBtn;
+export default CenterBtn;
 
 const StyledBurger = styled.div`
 	display: flex;

@@ -34,6 +34,7 @@ const RightMenu = ({ open }) => {
 			<li>Getting Started</li>
 			<li>Technologies</li>
 			<li>More Details</li>
+			<li>Right</li>
 		</Ul>
 	);
 };

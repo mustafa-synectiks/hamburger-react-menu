@@ -36,15 +36,15 @@ const LeftBtn = () => {
 export default LeftBtn;
 
 const StyledBurger = styled.div`
-	width: 2rem;
-	height: 2rem;
-	position: absolute;
-	bottom: 12em;
-	left: 20px;
 	display: flex;
-	justify-content: space-around;
-	flex-flow: column nowrap;
-	z-index: 20;
+	justify-content: center;
+	align-self: center;
+	margin: 0 auto;
+	z-index: 1;
+	/* position: absolute;
+	bottom: 12em;
+	left: 20px; */
+	/* flex-flow: column nowrap; */
 
 	button {
 		background-color: #fe91ca;
@@ -55,9 +55,6 @@ const StyledBurger = styled.div`
 		font-weight: bold;
 		cursor: pointer;
 		width: 10em;
-		&:before {
-			content: ${({ open }) => (open ? 'Close' : 'Open')};
-		}
 	}
 
 	div {

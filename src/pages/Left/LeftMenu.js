@@ -33,7 +33,7 @@ const LeftMenu = ({ open }) => {
 			</li>
 			<li>Getting Started</li>
 			<li>Technologies</li>
-			<li>More Details</li>
+			<li>Left</li>
 		</Ul>
 	);
 };
