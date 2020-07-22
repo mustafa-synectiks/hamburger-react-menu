@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 
 const ColumnOne = ({ open }) => {
+	const node = useRef();
 	const [ isOpen, setNav ] = useState(false);
 	const [ isOpenn, setNavv ] = useState(false);
 	const toggleNav = () => {
@@ -10,12 +11,26 @@ const ColumnOne = ({ open }) => {
 	const toggleNav2 = () => {
 		setNavv((isOpenn) => !isOpenn);
 	};
+	const handleClick = (e) => {
+		if (node.current.contains(e.target)) {
+			// inside click
+			return;
+		}
+		// outside click
+		setNav(false);
+		setNavv(false);
+	};
+	useEffect(() => {
+		document.addEventListener('mousedown', handleClick);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClick);
+		};
+	}, []);
 	return (
 		<Ul open={open}>
-			{/* <li> */}
-			<li onClick={toggleNav}>
+			<li ref={node} onClick={toggleNav}>
 				What We Do?
-				{/* <ul isOpen={isOpen}> */}
 				<ul className={isOpen ? `subMenu` : `subMenuHidden`}>
 					<li>Why Us?</li>
 					<li>Getting Started</li>
@@ -23,7 +38,7 @@ const ColumnOne = ({ open }) => {
 					<li>More Details</li>
 				</ul>
 			</li>
-			<li onClick={toggleNav2}>
+			<li ref={node} onClick={toggleNav2}>
 				Why Us?
 				<ul className={isOpenn ? `subMenu` : `subMenuHidden`}>
 					<li>What We Do?</li>
@@ -50,7 +65,7 @@ const Ul = styled.ul`
 	position: fixed;
 	top: 0em;
   left: 0%;
-   width: 100vw;
+  width: 100vw;
 	padding-top: 3.5rem;
 	padding-left: 1em;
 	padding-left: 1em;
@@ -69,34 +84,27 @@ const Ul = styled.ul`
 		background-color: pink;
 		position:absolute;
 		width: 85vw;
-		   top: 0px;
+		top: 0px;
     height: 50vh;
     padding-top: 3.5em;
 		list-style:none;
 		transform: translateX(15%);
 		/* transform: ${({ isOpen }) => (isOpen ? 'translateY(-10%)' : 'translateY(10%)')}; */
+		/* transform: ${({ open }) => (open ? 'translateY(-10%)' : 'translateY(10%)')}; */
 		transition: transform 0.5s ease-in;
 	}
-
-	/* .subMenuHidden {
-		transform: translateX(-70%);
-		/* opacity:0;
-		transition: transform 0.5s ease-in;
-		/* opacity: ${({ open }) => (open ? 0 : 1)};
-		height: 0em;
-		overflow: hidden;
-		} */
 
 	.subMenuHidden {
 		background-color: pink;
 		position:absolute;
 		width: 85vw;
-		   top: 0px;
+		top: 0px;
     height: 50vh;
     padding-top: 3.5em;
 		list-style:none;
 		transform: translateX(-105%);
 		/* transform: ${({ isOpen }) => (isOpen ? 'translateY(-10%)' : 'translateY(10%)')}; */
+		/* transform: ${({ open }) => (open ? 'translateY(-10%)' : 'translateY(10%)')}; */
 		transition: transform 0.5s ease-in;
 	}
 `;

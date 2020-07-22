@@ -1,18 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import ColumnOne from './ColumnOne';
 
 const ColumnTwo = () => {
+	// const node = useRef();
 	const [ open, setOpen ] = useState(false);
 	// const changeText = (text) => setButtonText(text);
+	// const handleClick = (e) => {
+	// 	if (node.current.contains(e.target)) {
+	// 		// inside click
+	// 		return;
+	// 	}
+	// 	// outside click
+	// 	setOpen(false);
+	// };
+	// useEffect(() => {
+	// 	document.addEventListener('mousedown', handleClick);
+
+	// 	return () => {
+	// 		document.removeEventListener('mousedown', handleClick);
+	// 	};
+	// }, []);
 	return (
 		<React.Fragment>
 			<StyledBurger>
 				<button open={open} onClick={() => setOpen(!open)}>
 					{open ? 'Close' : 'Learn More'}
 				</button>
-				{/* Learn More */}
-				{/* </button> */}
 			</StyledBurger>
 			<ColumnOne open={open} />
 		</React.Fragment>

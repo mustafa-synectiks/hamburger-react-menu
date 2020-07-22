@@ -1,5 +1,4 @@
 import React from 'react';
-// import a from 'gatsby';
 import styled from 'styled-components';
 
 import Burger from './Burger';
@@ -7,7 +6,6 @@ import Burger from './Burger';
 const Navbar = () => {
 	return (
 		<Nav>
-			{/* <div className='logo'>Synectiks</div> */}
 			<Burger />
 		</Nav>
 	);

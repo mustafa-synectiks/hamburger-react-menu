@@ -1,14 +1,13 @@
-import React from 'react';
-// import a from 'gatsby';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 import ColumnTwo from './ColumnTwo';
 
 const ColumnThree = () => {
+	const node = useRef();
 	return (
 		<Nav>
-			{/* <div className='logo'>Synectiks</div> */}
-			<ColumnTwo />
+			<ColumnTwo ref={node} />
 		</Nav>
 	);
 };
