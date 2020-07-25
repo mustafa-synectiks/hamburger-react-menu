@@ -9,6 +9,7 @@ const RightBtn = () => {
 	// const handleClick = (e) => {
 	// 	if (node.current.contains(e.target)) {
 	// 		// inside click
+	// 		setOpen(true);
 	// 		return;
 	// 	}
 	// 	// outside click

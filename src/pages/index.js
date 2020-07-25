@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Dropdown from './dropdown.js';
 import RightBlock from './Right/RightBlock.js';
 import LeftBlock from './Left/LeftBlock.js';
+import OutClick from './OutClickMenu/OutClick.js';
 
 const IndexPage = (props) => {
 	return (
@@ -13,7 +14,8 @@ const IndexPage = (props) => {
 					<LeftBlock />
 				</div>
 				<div className='column'>
-					<RightBlock />
+					{/* <RightBlock /> */}
+					<OutClick />
 				</div>
 			</div>
 		</Layout>

@@ -3,24 +3,15 @@ import styled from 'styled-components';
 import LeftMenu from './LeftMenu';
 
 const LeftBtn = () => {
-	// const node = useRef();
 	const [ open, setOpen ] = useState(false);
-	// const changeText = (text) => setButtonText(text);
-	// const handleClick = (e) => {
-	// 	if (node.current.contains(e.target)) {
-	// 		// inside click
-	// 		return;
-	// 	}
-	// 	// outside click
-	// 	setOpen(false);
-	// };
-	// useEffect(() => {
-	// 	document.addEventListener('mousedown', handleClick);
 
-	// 	return () => {
-	// 		document.removeEventListener('mousedown', handleClick);
-	// 	};
-	// }, []);
+	const OpenMenu = () => {
+		setOpen(true);
+	};
+	const closeMenu = () => {
+		setOpen(false);
+	};
+
 	return (
 		<React.Fragment>
 			<StyledBurger>
