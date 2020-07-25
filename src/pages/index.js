@@ -14,8 +14,8 @@ const IndexPage = (props) => {
 					<LeftBlock />
 				</div>
 				<div className='column'>
-					{/* <RightBlock /> */}
-					<OutClick />
+					<RightBlock />
+					{/* <OutClick /> */}
 				</div>
 			</div>
 		</Layout>

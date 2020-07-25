@@ -3,33 +3,26 @@ import styled from 'styled-components';
 import RightMenu from './RightMenu';
 
 const RightBtn = () => {
-	// const node = useRef();
 	const [ open, setOpen ] = useState(false);
-	// const changeText = (text) => setButtonText(text);
-	// const handleClick = (e) => {
-	// 	if (node.current.contains(e.target)) {
-	// 		// inside click
-	// 		setOpen(true);
-	// 		return;
-	// 	}
-	// 	// outside click
-	// 	setOpen(false);
-	// };
-	// useEffect(() => {
-	// 	document.addEventListener('mousedown', handleClick);
+	const [ showModal, setShowModal ] = useState(false);
 
-	// 	return () => {
-	// 		document.removeEventListener('mousedown', handleClick);
-	// 	};
-	// }, []);
+	const handleShowModal = () => {
+		setShowModal(true);
+	};
+	const handleCloseModal = () => {
+		setShowModal(false);
+	};
+
 	return (
 		<React.Fragment>
 			<StyledBurger>
-				<button open={open} onClick={() => setOpen(!open)}>
+				{showModal && <RightMenu closeModal={handleCloseModal} />}
+				<button onClick={handleShowModal}>{showModal ? 'Close' : 'Learn More'}</button>
+				{/* <button open={open} onClick={() => setOpen(!open)}>
 					{open ? 'Close' : 'Learn More'}
-				</button>
+				</button> */}
 			</StyledBurger>
-			<RightMenu open={open} />
+			{/* <RightMenu open={open} /> */}
 		</React.Fragment>
 	);
 };

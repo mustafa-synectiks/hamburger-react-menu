@@ -1,7 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-const RightMenu = ({ open }) => {
+const RightMenu = ({ closeModal }) => {
+	let myRef;
+	useEffect(() => {
+		document.addEventListener('click', closeTodoModal);
+		document.addEventListener('keyup', closeTodoModal);
+	}, []);
+
+	const closeTodoModal = (e) => {
+		if ((myRef && !myRef.contains(e.target)) || e.key === 'Escape') {
+			closeModal();
+		}
+	};
 	const [ isOpen, setNav ] = useState(false);
 	const [ isOpenn, setNavv ] = useState(false);
 	const toggleNav = () => {
@@ -12,7 +23,7 @@ const RightMenu = ({ open }) => {
 	};
 
 	return (
-		<Ul open={open}>
+		<Ul open={open} ref={(node) => (myRef = node)}>
 			<li onClick={toggleNav}>
 				What We Do?
 				<ul className={isOpen ? `subMenu` : `subMenuHidden`}>
@@ -35,6 +46,7 @@ const RightMenu = ({ open }) => {
 			<li>Technologies</li>
 			<li>More Details</li>
 			<li>Right</li>
+			<button onClick={closeTodoModal}>Cancel</button>
 		</Ul>
 	);
 };
@@ -44,7 +56,9 @@ export default RightMenu;
 const Ul = styled.ul`
 	list-style: none;
 	background-color: #0d2538;
-	transform: ${({ open }) => (open ? 'translateY(0%)' : 'translateY(-101%)')};
+	transform: translateY(-25%);
+	/* transform: ${({ showModal }) => (showModal ? 'translateY(0%)' : 'translateY(-101%)')}; */
+	/* transform: ${({ open }) => (open ? 'translateY(0%)' : 'translateY(-101%)')}; */
 	transition: transform 0.5s ease-in;
 	flex-flow: column nowrap;
 	position: fixed;
