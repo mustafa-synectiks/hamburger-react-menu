@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Dropdown from './dropdown.js';
 import RightBlock from './Right/RightBlock.js';
 import LeftBlock from './Left/LeftBlock.js';
-import CenterBlock from './Center/CenterBlock.js';
 
 const IndexPage = (props) => {
 	return (
@@ -12,9 +11,6 @@ const IndexPage = (props) => {
 			<div className='main'>
 				<div className='column'>
 					<LeftBlock />
-				</div>
-				<div className='column'>
-					<CenterBlock />
 				</div>
 				<div className='column'>
 					<RightBlock />
